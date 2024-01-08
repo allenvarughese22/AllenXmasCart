@@ -1,0 +1,41 @@
+/* Navbar.css */
+.navcolor {
+  background-color: #b3000c; /* Deep red for the primary background */
+  border-bottom: 3px solid #ffd700; /* Gold border for a festive touch */
+}
+
+.navcolor .navbar-brand {
+  color: #ffd700; /* Gold color for brand text */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navcolor .nav-link {
+  color: white; /* Light text for contrast */
+  transition: color 0.3s ease-in-out;
+}
+
+.navcolor .nav-link:hover {
+  color: #ffd700; /* Gold color on hover for links */
+}
+
+.navcolor .navbar-toggler {
+  border-color: #ffd700; /* Gold color for the toggler icon */
+}
+
+.navcolor .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffd700' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom toggler icon in gold */
+}
+
+.navcolor .dropdown-menu {
+  background-color: #005f30; /* Dark green for dropdown background */
+  border: 1px solid #ffd700; /* Gold border for dropdown */
+}
+
+.navcolor .dropdown-item {
+  color: #ffd700; /* Gold text for dropdown items */
+}
+
+.navcolor .dropdown-item:hover {
+  background-color: #b3000c; /* Deep red background on hover for dropdown items */
+}

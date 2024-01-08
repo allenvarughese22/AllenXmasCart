@@ -1,0 +1,55 @@
+/* HomePageImage.module.css */
+.display6 {
+  font-size: 52px;
+  font-family: "Pacifico", cursive;
+  color: #e00728;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  text-align: right; /* Aligns text to the right */
+  padding-left: 130px;
+  padding-right: 40px; /* Shifts text slightly to the right */
+}
+
+.textdesign {
+  font-size: 20px;
+  color: #240bb2; /* Changed to blue, as the comment suggests red but the color code is blue */
+  margin-top: 20px;
+  text-align: right; /* Aligns text to the right */
+  padding-left: 100px;
+  padding-right: 100px; /* Adds left padding */
+  font-style: italic; /* Makes the text italic */
+}
+
+.jumbotronbg {
+  background-color: #f7f7f7; /* Soft white for a snowy look */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("../src/assets/bgxmas1.jpg"); /* Optional: Add a subtle Christmas background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imgcontainer {
+  max-width: 180px;
+  overflow: hidden;
+  border: 3px solid #fff; /* Thicker white border for a festive look */
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+  margin: 0 auto;
+}
+
+.imgfluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%; /* Circular image for a more refined look */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
