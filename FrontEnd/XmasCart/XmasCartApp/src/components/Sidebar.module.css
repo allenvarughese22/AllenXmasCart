@@ -1,0 +1,33 @@
+/* Sidebar.module.css */
+
+.sidebar {
+  width: auto; /* Adjust the width as needed */
+  height: 50vh; /* Make sidebar height equal to the viewport height */
+  background-color: #faf7f7; /* Sidebar background color */
+  padding: 20px;
+  padding-left: 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Adjusts shadow for right side */
+
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the right */
+  display: flex;
+}
+
+.sidebarList {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px; /* Adds some space at the top */
+}
+
+.sidebarList li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.xmartMenu {
+  color: blue; /* Sets the text color to blue */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: underline; /* Underlines the text */
+}

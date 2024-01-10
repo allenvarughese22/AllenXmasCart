@@ -53,3 +53,67 @@
   align-items: center;
   text-align: center;
 }
+
+.toggleSidebarButton {
+  background-color: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark text color */
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 24px; /* Larger font size for visibility */
+  position: absolute; /* Positioning the button */
+  top: 100px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+}
+
+.carouselcustom {
+  background-color: red;
+  padding-top: 5%;
+}
+
+.footer {
+  background-color: #333; /* Background color for the footer */
+  color: #fff; /* Text color for the footer */
+  padding: 20px 0; /* Adjust the padding as needed */
+  text-align: center; /* Center-align the content within the footer */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin for paragraph */
+}
+
+additionalSection {
+  background-color: #fff; /* Background color */
+  padding: 20px; /* Padding for content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+.masMessage {
+  font-size: 18px; /* Font size */
+  color: #333; /* Text color */
+  text-align: center; /* Center text */
+  line-height: 1.5; /* Line height for readability */
+  margin-top: 100px;
+}
+
+.masMessage::before {
+  content: "❤️"; /* Heart icon before the message */
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px; /* Spacing between heart and text */
+}
+
+masMessage::after {
+  content: "✨ Merry Christmas! ✨"; /* Festive message after the text */
+  display: block;
+  font-size: 24px;
+  margin-top: 10px; /* Spacing between text and festive message */
+  color: #f00; /* Red color for the festive message */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center the festive message */
+}
+
+.boldText {
+  font-weight: bold;
+}

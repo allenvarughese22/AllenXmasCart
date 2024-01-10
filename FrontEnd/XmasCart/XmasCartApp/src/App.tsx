@@ -1,15 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
-import CardDeck from "./components/carddeck";
+
 import HomePageImage from "./components/homepageImage";
+import Products from "./components/Products";
+import Deals from "./components/Deals";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <HomePageImage />
-      <CardDeck />
-      <div>App</div>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePageImage />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<Deals />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,7 +1,24 @@
 /* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center; /* Aligns items vertically center */
+  justify-content: space-between; /* Adjusts spacing */
+  /* Other styles */
+}
+
 .navcolor {
   background-color: #b3000c; /* Deep red for the primary background */
   border-bottom: 3px solid #ffd700; /* Gold border for a festive touch */
+}
+
+.navcolor .navbar-nav .nav-item {
+  margin-right: 20px; /* Adds space between nav items */
+}
+
+.navcolor .nav-link {
+  color: white; /* Light text for contrast */
+  padding: 10px 15px; /* Adjusts padding for better spacing */
+  transition: color 0.3s ease-in-out;
 }
 
 .navcolor .navbar-brand {

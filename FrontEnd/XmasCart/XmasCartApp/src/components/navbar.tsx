@@ -1,16 +1,27 @@
+import React, { useState, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
+import Sidebar from "./Sidebar"; // Update the import path as needed
+import useOutsideClick from "../../src/hooks/useOutsideClick"; // Update the import path as needed
 
-function Navbar() {
+const Navbar: React.FC = () => {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement>(null); // Adjust based on your Sidebar component
+
+  useOutsideClick(sidebarRef, () => {
+    if (isSidebarVisible) setIsSidebarVisible(false);
+  });
+
   return (
-    <nav className="navbar navbar-expand-lg  sticky-top navcolor">
-      <a className="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg sticky-top navcolor">
+      <Link className="navbar-brand" to="/">
         <span>🎅 </span> XMasMart
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -19,51 +30,40 @@ function Navbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home <span className="sr-only">(current)</span>
-            </a>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/" end>
+              Home
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Features
-            </a>
+            <NavLink className="nav-link" to="/products">
+              Products
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
-            </a>
-            <div
-              className="dropdown-menu"
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
+            <NavLink className="nav-link" to="/deals">
+              Deals
+            </NavLink>
           </li>
         </ul>
       </div>
+      {/* <button
+        onClick={() => setIsSidebarVisible(!isSidebarVisible)}
+        className="btn btn-secondary ml-auto"
+      >
+        {isSidebarVisible ? "Hide Sidebar" : "Show Sidebar"}
+      </button> */}
+      <button
+        onClick={() => setIsSidebarVisible(!isSidebarVisible)}
+        type="button"
+        className="btn btn-light"
+      >
+        {isSidebarVisible ? <i>Less!</i> : <i> More!</i>}
+      </button>
+      {isSidebarVisible && <Sidebar ref={sidebarRef} />}{" "}
+      {/* Adjust if Sidebar is a functional component */}
     </nav>
   );
-}
+};
 
 export default Navbar;
