@@ -8,4 +8,6 @@ import com.takeo.product.model.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
+	
+	void deleteById(Integer id);
 }
