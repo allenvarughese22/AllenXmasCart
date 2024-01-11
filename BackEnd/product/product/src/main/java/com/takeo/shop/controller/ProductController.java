@@ -1,4 +1,4 @@
-package com.takeo.product.controller;
+package com.takeo.shop.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.takeo.product.model.Product;
-import com.takeo.product.service.ProductService;
+import com.takeo.shop.model.Product;
+import com.takeo.shop.service.ProductService;
 
 
 

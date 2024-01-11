@@ -1,4 +1,4 @@
-package com.takeo.product.config;
+package com.takeo.orderdetails.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

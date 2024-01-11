@@ -1,4 +1,4 @@
-package com.takeo.product;
+package com.takeo.shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

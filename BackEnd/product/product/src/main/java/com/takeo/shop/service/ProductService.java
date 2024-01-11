@@ -1,4 +1,4 @@
-package com.takeo.product.service;
+package com.takeo.shop.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.takeo.product.model.Product;
-import com.takeo.product.repository.ProductRepository;
+import com.takeo.shop.model.Product;
+import com.takeo.shop.repository.ProductRepository;
 
 @Service
 public class ProductService {

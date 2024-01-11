@@ -1,4 +1,4 @@
-package com.takeo.product.model;
+package com.takeo.shop.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
