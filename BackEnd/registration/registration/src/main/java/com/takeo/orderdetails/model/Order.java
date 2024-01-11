@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "orderitems")
+@Table(name = "orders")
 @Entity
 public class Order {
 	

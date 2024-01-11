@@ -1,5 +1,7 @@
 package com.takeo.shop.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,8 +49,8 @@ public class Product {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setPrice(double priceValue) {
+		this.price = priceValue;
 	}
 	@Override
 	public String toString() {
