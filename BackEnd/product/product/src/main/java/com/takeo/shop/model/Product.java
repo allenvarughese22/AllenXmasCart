@@ -27,7 +27,17 @@ public class Product {
 	@Column(name = "price")
 	public double price;
 	
+	@Column(name="image_src")
+	public String imagesrc;
 	
+	
+	
+	public String getImagesrc() {
+		return imagesrc;
+	}
+	public void setImagesrc(String imagesrc) {
+		this.imagesrc = imagesrc;
+	}
 	public int getId() {
 		return id;
 	}

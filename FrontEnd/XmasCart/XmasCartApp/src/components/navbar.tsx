@@ -47,6 +47,7 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
       </div>
+      <Link to="/cart">Cart</Link>
       {/* <button
         onClick={() => setIsSidebarVisible(!isSidebarVisible)}
         className="btn btn-secondary ml-auto"

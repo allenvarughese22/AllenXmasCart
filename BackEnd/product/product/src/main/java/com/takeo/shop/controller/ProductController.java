@@ -1,8 +1,19 @@
 package com.takeo.shop.controller;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
+
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +23,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.takeo.shop.model.Product;
@@ -40,14 +52,9 @@ public class ProductController {
 		return productService.deleteProduct(productId);
 	}
 
-	@PutMapping("/edit")
-	public ResponseEntity<String> editProduct(@RequestParam("id") int productId,
-			@RequestParam("name") String productName, @RequestParam("desc") String productDescription,
-			@RequestParam("price") Double productPrice) {
+	
 
-		// Assuming productService.editProduct returns ResponseEntity<String>
-		return productService.editProduct(productId, productName, productDescription, productPrice);
+	
 
-	}
 
 }

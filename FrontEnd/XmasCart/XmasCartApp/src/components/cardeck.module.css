@@ -1,0 +1,34 @@
+/* Since you're using Bootstrap, some of these styles might be redundant */
+
+.card {
+  /* Use Bootstrap's shadow class for consistency */
+  border: none; /* Remove the border for a cleaner look */
+}
+
+.cardimg {
+  width: 80% !important; /* Adjust image width */
+  height: auto !important; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures images cover the area nicely */
+  margin: 0 auto; /* Center the image in the card */
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will align content nicely */
+}
+
+.card-title {
+  font-size: 1.1rem; /* Adjust font size for better visibility */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem; /* Adjust font size for description */
+}
+
+/* Add more custom styles as needed */
