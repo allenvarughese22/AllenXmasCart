@@ -31,4 +31,18 @@
   font-size: 0.95rem; /* Adjust font size for description */
 }
 
-/* Add more custom styles as needed */
+.button-spacing button {
+  margin-right: 50px; /* Adjust as needed */
+  margin-left: 50px; /* Adjust as needed */
+}
+
+.button-spacing span {
+  margin-right: 50px; /* Adjust as needed */
+  margin-left: 50px; /* Adjust as needed */
+}
+
+.aaspan{
+  margin-right: 50px; /* Adjust as needed */
+  margin-left: 50px; /
+  
+}

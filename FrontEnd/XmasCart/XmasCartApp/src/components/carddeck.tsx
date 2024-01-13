@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
-interface Post {
+interface Product {
   id: number;
   name: string;
   description: string;
@@ -12,8 +12,8 @@ interface Post {
 }
 
 const CardDeck: React.FC = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const { addToCart } = useCart();
+  const [products, setProducts] = useState<Product[]>([]);
+  const { cartItems, addToCart, updateQuantity } = useCart();
 
   useEffect(() => {
     fetch("http://localhost:8557/products/allproducts")
@@ -23,8 +23,8 @@ const CardDeck: React.FC = () => {
         }
         return response.json();
       })
-      .then((data: Post[]) => {
-        setPosts(data.slice(0, 1000));
+      .then((data) => {
+        setProducts(data.slice(0, 1000)); // Assuming 'data' is an array of products
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
@@ -32,40 +32,66 @@ const CardDeck: React.FC = () => {
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    e.currentTarget.src = "path_to_default_image.jpg"; // Path to your default or placeholder image
+    e.currentTarget.src = "path_to_default_image.jpg"; // Fallback image URL
+  };
+
+  const findQuantity = (productId: number) => {
+    const item = cartItems.find((item) => item.product.id === productId);
+    return item ? item.quantity : 0;
   };
 
   return (
     <div className="container my-5">
       <div className="row">
-        {posts.map((post) => (
-          <div key={post.id} className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm" style={{ border: "none" }}>
-              <img
-                src={post.imagesrc}
-                alt={post.name}
-                // className="cardimg"
-                onError={handleImageError}
-              />
-              <div className="card-body">
-                <h5 className="card-title">
-                  <Link to={`/products/${post.id}`}>{post.name}</Link>
-                </h5>
-                <p className="card-text">{post.description}</p>
-                <p className="card-text">
-                  <strong>Price:</strong> ${post.price}
-                </p>
+        {products.map((product) => {
+          const quantity = findQuantity(product.id);
 
-                <button
-                  className="btn btn-primary"
-                  onClick={() => addToCart(post)}
-                >
-                  Add to Cart
-                </button>
+          return (
+            <div key={product.id} className="col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <img
+                  src={product.imagesrc}
+                  alt={product.name}
+                  onError={handleImageError}
+                  className="card-img-top"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">
+                    <Link to={`/products/${product.id}`}>{product.name}</Link>
+                  </h5>
+                  <p className="card-text">{product.description}</p>
+                  <p className="card-text">
+                    <strong>Price:</strong> ${product.price}
+                  </p>
+                  <div className="d-flex align-items-center button-spacing">
+                    <button
+                      className="btn btn-outline-secondary btn-sm mr-2"
+                      onClick={() =>
+                        updateQuantity(product.id, Math.max(quantity - 1, 0))
+                      }
+                      disabled={quantity === 0}
+                    >
+                      -
+                    </button>
+                    <span
+                      className="aaspan"
+                      style={{ marginLeft: "10px", marginRight: "10px" }}
+                    >
+                      {quantity}
+                    </span>
+
+                    <button
+                      className="btn btn-outline-primary btn-sm ml-2"
+                      onClick={() => addToCart(product)}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

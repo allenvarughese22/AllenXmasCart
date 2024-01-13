@@ -56,3 +56,13 @@
 .navcolor .dropdown-item:hover {
   background-color: #b3000c; /* Deep red background on hover for dropdown items */
 }
+
+.navbar-cart-link {
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+.cart-link {
+  color: #eff2f4; /* Choose your preferred color */
+  font-weight: bold;
+}

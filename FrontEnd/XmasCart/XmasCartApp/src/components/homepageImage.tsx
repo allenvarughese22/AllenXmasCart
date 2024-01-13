@@ -34,40 +34,46 @@ function HomePageImage() {
               prevIcon={<span>&#9664;</span>}
             >
               <Carousel.Item>
-                <img
-                  src="../src/assets/offer5.jpeg"
-                  alt="Carousel Image 1"
-                  className="img-fluid"
-                  style={{ maxHeight: "400px" }}
-                />
+                <a href="/products">
+                  <img
+                    src="../src/assets/offer5.jpeg"
+                    alt="Carousel Image 1"
+                    className="img-fluid"
+                    style={{ maxHeight: "400px" }}
+                  />
+                </a>
                 <Carousel.Caption>
-                  <h3>Offer 1</h3>
-                  <p>Description for Offer 1</p>
+                  {/* <h3>Offer 1</h3>
+                  <p>Description for Offer 1</p> */}
                 </Carousel.Caption>
               </Carousel.Item>
 
               <Carousel.Item>
-                <img
-                  src="../src/assets/offer2.jpeg"
-                  alt="Carousel Image 2"
-                  className="img-fluid"
-                  style={{ maxHeight: "400px" }}
-                />
+                <a href="/products">
+                  <img
+                    src="../src/assets/offer2.jpeg"
+                    alt="Carousel Image 2"
+                    className="img-fluid"
+                    style={{ maxHeight: "400px" }}
+                  />
+                </a>
                 <Carousel.Caption>
-                  <h3>Offer 2</h3>
-                  <p>Description for Offer 2</p>
+                  {/* <h3>Offer 2</h3>
+                  <p>Description for Offer 2</p> */}
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img
-                  src="../src/assets/offer6.jpeg"
-                  alt="Carousel Image 3"
-                  className="img-fluid"
-                  style={{ maxHeight: "400px" }}
-                />
+                <a href="/products">
+                  <img
+                    src="../src/assets/offer6.jpeg"
+                    alt="Carousel Image 3"
+                    className="img-fluid"
+                    style={{ maxHeight: "400px" }}
+                  />
+                </a>
                 <Carousel.Caption>
-                  <h3>Offer 3</h3>
-                  <p>Description for Offer 3</p>
+                  {/* <h3>Offer 3</h3>
+                  <p>Description for Offer 3</p> */}
                 </Carousel.Caption>
               </Carousel.Item>
               {/* Add more Carousel.Items for additional offers */}

@@ -41,19 +41,17 @@ const Navbar: React.FC = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/deals">
-              Deals
+            <NavLink className="nav-link" to="/about">
+              About
             </NavLink>
           </li>
         </ul>
       </div>
-      <Link to="/cart">Cart</Link>
-      {/* <button
-        onClick={() => setIsSidebarVisible(!isSidebarVisible)}
-        className="btn btn-secondary ml-auto"
-      >
-        {isSidebarVisible ? "Hide Sidebar" : "Show Sidebar"}
-      </button> */}
+      <div className="navbar-cart-link ml-auto">
+        <Link to="/cart" className="cart-link">
+          Your Cart
+        </Link>
+      </div>
       <button
         onClick={() => setIsSidebarVisible(!isSidebarVisible)}
         type="button"

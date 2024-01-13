@@ -1,0 +1,79 @@
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif; /* Consider using a more elegant font */
+}
+
+.about-container h1 {
+  color: #c0392b; /* Christmas red */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Larger size for the heading */
+}
+
+.about-container p {
+  color: #333;
+  line-height: 1.6; /* Improves readability */
+  margin-bottom: 20px;
+  text-align: justify; /* Ensures even alignment of text on both sides */
+  padding: 0 15px; /* Adds some padding around the text */
+  font-size: 1.1em; /* Slightly larger font size for better readability */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* If you need colored text, use a class like this: */
+.colorful {
+  color: #c0392b; /* Example color */
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-right: 10px;
+  min-width: 100px; /* Adjust as needed for label width */
+}
+
+.form-control {
+  flex-grow: 1; /* Allows input fields to take up remaining space */
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  padding: 10px 15px;
+  background-color: #27ae60; /* Christmas green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2ecc71;
+}
